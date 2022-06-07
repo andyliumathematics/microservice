@@ -1,0 +1,12 @@
+pluginManagement {
+	repositories {
+		maven { url 'https://repo.spring.io/milestone' }
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'microservice'
+rootProject.children.each { project ->
+	project.buildFileName = "build.gradle"
+}
+
+include('gateway')
